@@ -11,11 +11,11 @@ freeze:
   freeze_resblocks: true
   freeze_attention: false
 model_config:
-  version: '2.1'
+  version: "2.1"
   image_size: 64
   num_channels: 384
   num_res_blocks: 3
-  channel_mult: ''
+  channel_mult: ""
   num_heads: 1
   num_head_channels: 64
   num_heads_upsample: -1
@@ -36,13 +36,12 @@ model_config:
   inpainting: false
   up: false
 
-  
 diffusion_config:
   learn_sigma: true
   sigma_small: false
   steps: 1000
   noise_schedule: linear
-  timestep_respacing: ''
+  timestep_respacing: ""
   use_kl: false
   predict_xstart: false
   rescale_timesteps: true
@@ -51,45 +50,45 @@ diffusion_config:
   linear_end: 0.012
 
 optim_params:
-    name: transformers.Adafactor
-    params:
-      lr: 0.000005
-      weight_decay: 0
-      scale_parameter: false
-      relative_step: false
+  name: transformers.Adafactor
+  params:
+    lr: 0.000005
+    weight_decay: 0
+    scale_parameter: false
+    relative_step: false
 image_enc_params:
-    name: MOVQ
-    scale: 1
-    ckpt_path:
-    params:
-        embed_dim: 4
-        n_embed: 16384
-        ddconfig:
-          double_z: false
-          z_channels: 4
-          resolution: 256
-          in_channels: 3
-          out_ch: 3
-          ch: 128
-          ch_mult:
-          - 1
-          - 2
-          - 2
-          - 4
-          num_res_blocks: 2
-          attn_resolutions:
-          - 32
-          dropout: 0.0
+  name: MOVQ
+  scale: 1
+  ckpt_path: /content/Kandinsky_2.1/movq_final.ckpt
+  params:
+    embed_dim: 4
+    n_embed: 16384
+    ddconfig:
+      double_z: false
+      z_channels: 4
+      resolution: 256
+      in_channels: 3
+      out_ch: 3
+      ch: 128
+      ch_mult:
+        - 1
+        - 2
+        - 2
+        - 4
+      num_res_blocks: 2
+      attn_resolutions:
+        - 32
+      dropout: 0.0
 
 text_enc_params:
-    model_path: 
-    model_name: multiclip
-    in_features: 1024
-    out_features: 768
-        
+  model_path:
+  model_name: multiclip
+  in_features: 1024
+  out_features: 768
+
 data:
   train:
-    df_path: 
+    df_path: /content/dataset
     image_size: 768
     tokenizer_name:
     clip_image_size: 224
