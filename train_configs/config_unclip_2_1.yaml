@@ -1,4 +1,4 @@
-params_path:
+params_path: ""
 drop_first_layer: false
 clip_name: ViT-L/14
 num_epochs: 2
