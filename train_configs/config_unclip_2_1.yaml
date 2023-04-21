@@ -88,7 +88,7 @@ text_enc_params:
 
 data:
   train:
-    df_path: /content/dataset
+    df_path: data.csv
     image_size: 768
     tokenizer_name:
     clip_image_size: 224
