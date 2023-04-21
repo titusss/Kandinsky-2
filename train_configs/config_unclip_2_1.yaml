@@ -1,10 +1,10 @@
 params_path: ""
 drop_first_layer: false
 clip_name: ViT-L/14
-num_epochs: 2
-save_every: 1000
+num_epochs: 50
+save_every: 100
 save_name: model
-save_path: test
+save_path: /content/model_results
 inpainting: false
 device: cuda
 freeze:
