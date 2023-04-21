@@ -90,7 +90,7 @@ data:
   train:
     df_path: data.csv
     image_size: 768
-    tokenizer_name:
+    tokenizer_name: M-CLIP/XLM-Roberta-Large-Vit-L-14
     clip_image_size: 224
     drop_text_prob: 0.5
     drop_image_prob: 0.1
