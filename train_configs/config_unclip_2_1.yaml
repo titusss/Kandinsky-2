@@ -81,7 +81,7 @@ image_enc_params:
       dropout: 0.0
 
 text_enc_params:
-  model_path:
+  model_path: /content/Kandinsky_2.1/text_encoder
   model_name: multiclip
   in_features: 1024
   out_features: 768
